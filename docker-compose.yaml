@@ -1,0 +1,8 @@
+x-aws-vpc: "vpc-01f6d2b7957a1928a"
+services:
+  workshop-repo:
+    image: gunaraja/workshop-repo:hi-docker
+    build:
+      context: .
+    ports: 
+      - 80:80
