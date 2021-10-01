@@ -1,4 +1,4 @@
-x-aws-vpc: "vpc-01f6d2b7957a1928a"
+x-aws-vpc: "vpc-0a3af2810e987b335"
 services:
   workshop-repo:
     image: gunaraja/workshop-repo:hi-docker
