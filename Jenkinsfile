@@ -19,8 +19,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker context use default'
-        sh 'docker ecs compose build'
-        sh 'docker ecs compose push'
+        sh 'docker compose build'
+        sh 'docker compose push'
       }
     }
     stage('Deploy') {
