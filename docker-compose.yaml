@@ -1,4 +1,5 @@
-x-aws-vpc: "vpc-0a3af2810e987b335"
+x-aws-vpc: "vpc-0a3af2810e987b335";
+x-aws-cluster: "jenkins-docker-cluster";
 services:
   workshop-repo:
     image: gunaraja/workshop-repo:hi-docker
