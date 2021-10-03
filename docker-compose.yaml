@@ -5,5 +5,7 @@ services:
       - 80:80
     build: .
 
-x-aws-vpc: "vpc-0a3af2810e987b335";
-x-aws-cluster: "arn:aws:ecs:ap-south-1:933912074683:cluster/jenkins-docker-cluster";
+    x-aws-vpc: 
+        - "vpc-0a3af2810e987b335"
+    x-aws-cluster: 
+        - "arn:aws:ecs:ap-south-1:933912074683:cluster/jenkins-docker-cluster"
