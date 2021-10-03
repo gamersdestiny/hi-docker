@@ -1,13 +1,8 @@
-x-aws-vpc: "vpc-0a3af2810e987b335";
 services:
-    web:
-        build: .
-        ports: 
-            - "80:80"
-        volumes:
-            - .:/code
-            - logvolume01:/var/log
-        workshop-repo:
-            image: gunaraja/workshop-repo:hi-docker
-    volumes:
-        logvolume01: {}
+  workshop-repo:
+    image: gunaraja/workshop-repo:hi-docker
+    x-aws-vpc: "vpc-0a3af2810e987b335";
+    x-aws-cluster: "jenkins-docker-cluster";
+    build: .
+    ports: 
+      - 80:80
