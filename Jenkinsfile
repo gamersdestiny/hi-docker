@@ -12,15 +12,15 @@ pipeline {
       steps {
         sh '''
           docker --version
-          /g/applications/docker-windows-amd64.exe compose version
+          docker compose version
         '''
       }
     }
     stage('Build') {
       steps {
-        sh '/g/applications/docker-windows-amd64.exe context use default'
-        sh '/g/applications/docker-windows-amd64.exe compose build'
-        sh '/g/applications/docker-windows-amd64.exe compose push'
+        sh 'docker context use default'
+        sh 'docker compose build'
+        sh 'docker compose push'
       }
     }
     stage('Deploy') {
