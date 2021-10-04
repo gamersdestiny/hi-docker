@@ -1,8 +1,5 @@
 pipeline {
   agent 'any'
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
   environment {
     DOCKER_HUB_CREDS = credentials('docker-hub-creds')
     AWS_CREDS = credentials('jenkins-ecs-user')
@@ -19,8 +16,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker context use default'
-        // sh 'docker compose build'
-        // sh 'docker compose push'
+        sh 'docker compose build'
+        sh 'docker compose push'
       }
     }
     stage('Deploy') {
